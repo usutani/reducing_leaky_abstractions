@@ -1,7 +1,5 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  name: MyString
-
-two:
-  name: MyString
+# person_0 .. person_4
+<% 5.times do |n| %>
+person_<%= n %>:
+  name: <%= "person #{n}" %>
+<% end %>

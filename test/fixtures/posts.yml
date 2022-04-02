@@ -1,11 +1,25 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# person_0のpost
+post_0_0:
+  body: post 0 0
+  author: person_0
+  published_at: nil
 
-one:
-  body: MyText
-  person: one
-  published: false
+post_0_1:
+  body: post 0 1
+  author: person_0
+  published_at: <%= Time.current %>
 
-two:
-  body: MyText
-  person: two
-  published: false
+post_0_2:
+  body: post 0 2
+  author: person_0
+  published_at: <%= Time.current %>
+
+# person_1のpost
+<% 5.times do |n| %>
+post_1_<%= n %>:
+  body: <%= "post 1 #{n}" %>
+  author: person_1
+  published_at: <%= Time.current %>
+<% end %>
+
+# person_2以降のpostは無し
